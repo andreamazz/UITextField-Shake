@@ -34,10 +34,14 @@
 
 - (IBAction)actionShake:(id)sender
 {
-	NSLog(@"%d, %f, %f", [self.textShakes.text intValue], [self.textDelta.text floatValue], [self.textSpeed.text floatValue]);
+	[self shake];
+}
+
+- (void)shake
+{
 	[self.textField shake:[self.textShakes.text intValue]
-		   withDelta:[self.textDelta.text floatValue]
-			andSpeed:[self.textSpeed.text floatValue]];
+				withDelta:[self.textDelta.text floatValue]
+				 andSpeed:[self.textSpeed.text floatValue]];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -45,9 +49,7 @@
 	if (textField != _textField) {
 		[textField resignFirstResponder];
 	} else {
-		[textField shake:[self.textShakes.text intValue]
-			   withDelta:[self.textDelta.text floatValue]
-				andSpeed:[self.textSpeed.text floatValue]];
+		[self shake];
 	}
 	
 	return YES;
