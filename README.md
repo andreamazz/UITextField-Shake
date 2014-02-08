@@ -1,6 +1,8 @@
 UITextField+Shake
 =============
 
+[![Build Status](https://travis-ci.org/andreamazz/UITextField-Shake.png)](https://travis-ci.org/andreamazz/UITextField-Shake)
+
 UITextField category that adds a shake animation like the password field of the OsX login screen.
 
 Usage
