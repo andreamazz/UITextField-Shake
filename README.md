@@ -6,6 +6,17 @@ UITextField+Shake
 
 UITextField category that adds a shake animation like the password field of the OsX login screen.
 
+Screenshot
+--------------------
+![UITextField+Shake](http://www.eflatgames.com/github/UITextField-Shake.gif)
+
+Setup with Cocoapods
+--------------------
+* Add ```pod 'UITextField+Shake'``` to your Podfile
+* Run ```pod install```
+* Run ```open App.xcworkspace```
+* Import ```UITextField+Shake.h``` in your controller's header file
+
 Usage
 --------------------
 ```objc
