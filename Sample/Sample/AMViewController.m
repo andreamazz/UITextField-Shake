@@ -55,4 +55,13 @@
 	return YES;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.textShakes resignFirstResponder];
+    [self.textSpeed resignFirstResponder];
+    [self.textField resignFirstResponder];
+    [self.textDelta resignFirstResponder];
+    
+}
+
 @end
