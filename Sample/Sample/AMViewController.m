@@ -57,11 +57,11 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self.textShakes resignFirstResponder];
-    [self.textSpeed resignFirstResponder];
-    [self.textField resignFirstResponder];
-    [self.textDelta resignFirstResponder];
-    
+	[self.view.subviews enumerateObjectsUsingBlock:^(UIView* obj, NSUInteger idx, BOOL *stop) {
+		if ([obj isKindOfClass:[UITextField class]]) {
+			[obj resignFirstResponder];
+		}
+	}];
 }
 
 @end
