@@ -36,6 +36,7 @@ typedef NS_ENUM(NSInteger, ShakeDirection) {
  * @param interval The duration of one shake
  */
 - (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval;
+
 /** Shake the UITextField at a custom speed
  *
  * Shake the text field a given number of times with a given speed
