@@ -30,7 +30,25 @@ Usage
             withDelta:5    // 5 points wide
              andSpeed:0.03 // 30ms per shake
 ];
+
+// Shake with a custom speed and direction
+[self.textField shake:10   // 10 times
+            withDelta:5    // 5 points wide
+             andSpeed:0.03 // 30ms per shake
+       shakeDirection:ShakeDirectionVertical
+];
 ```
+
+Changelog
+==================
+
+0.2
+--------------------
+Added shake direction. Thanks to [SkylerLutz](https://github.com/SkylerLutz).
+
+0.1
+--------------------
+First release
 
 MIT License
 ==================
