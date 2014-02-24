@@ -31,6 +31,8 @@
 		[obj.layer setBorderColor:[UIColor colorWithRed:49.0/255.0 green:186.0/255.0 blue:81.0/255.0 alpha:1].CGColor];
 		[obj setDelegate:self];
 	}];
+	[self.shakeDirection.layer setBorderWidth:2];
+	[self.shakeDirection.layer setBorderColor:self.shakeDirection.tintColor.CGColor];
     self.shakeDirection.selectedSegmentIndex = 0;
 }
 

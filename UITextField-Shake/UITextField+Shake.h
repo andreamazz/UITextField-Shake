@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Fancy Pixel. All rights reserved.
 //
 
-typedef enum ShakeDirection {
+typedef NS_ENUM(NSInteger, ShakeDirection) {
     ShakeDirectionHorizontal = 0,
     ShakeDirectionVertical
-} ShakeDirection;
+};
 
 @interface UITextField (Shake)
 
