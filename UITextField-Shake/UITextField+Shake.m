@@ -12,18 +12,20 @@
 
 - (void)shake:(int)times withDelta:(CGFloat)delta
 {
-	[self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:0.03];
+	[self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:0.03 shakeDirection:ShakeDirectionHorizontal];
 }
 
 - (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval
 {
-	[self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:interval];
+	[self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:interval shakeDirection:ShakeDirectionHorizontal];
 }
-
-- (void)_shake:(int)times direction:(int)direction currentTimes:(int)current withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval
+- (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection {
+    [self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:interval shakeDirection:shakeDirection];
+}
+- (void)_shake:(int)times direction:(int)direction currentTimes:(int)current withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection
 {
 	[UIView animateWithDuration:interval animations:^{
-		self.transform = CGAffineTransformMakeTranslation(delta * direction, 0);
+		self.transform = (shakeDirection == ShakeDirectionHorizontal) ? CGAffineTransformMakeTranslation(delta * direction, 0) : CGAffineTransformMakeTranslation(0, delta * direction);
 	} completion:^(BOOL finished) {
 		if(current >= times) {
 			self.transform = CGAffineTransformIdentity;
@@ -33,7 +35,8 @@
 		   direction:direction * -1
 		currentTimes:current + 1
 		   withDelta:delta
-			andSpeed:interval];
+			andSpeed:interval
+         shakeDirection:shakeDirection];
 	}];
 }
 

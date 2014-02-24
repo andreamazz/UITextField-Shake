@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textSpeed;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITextField *textDelta;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *shakeDirection;
 
 @end
 
@@ -23,13 +24,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
 	[self setTitle:@"Demo"];
 	[@[_textDelta, _textField, _textShakes, _textSpeed] enumerateObjectsUsingBlock:^(UITextField* obj, NSUInteger idx, BOOL *stop) {
 		[obj.layer setBorderWidth:2];
 		[obj.layer setBorderColor:[UIColor colorWithRed:49.0/255.0 green:186.0/255.0 blue:81.0/255.0 alpha:1].CGColor];
 		[obj setDelegate:self];
 	}];
+    self.shakeDirection.selectedSegmentIndex = 0;
 }
 
 - (IBAction)actionShake:(id)sender
@@ -41,7 +43,8 @@
 {
 	[self.textField shake:[self.textShakes.text intValue]
 				withDelta:[self.textDelta.text floatValue]
-				 andSpeed:[self.textSpeed.text floatValue]];
+				 andSpeed:[self.textSpeed.text floatValue]
+           shakeDirection:(self.shakeDirection.selectedSegmentIndex == 0) ? ShakeDirectionHorizontal : ShakeDirectionVertical];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
