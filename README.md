@@ -8,7 +8,7 @@ UITextField category that adds a shake animation like the password field of the 
 
 Screenshot
 --------------------
-![UITextField+Shake](http://www.eflatgames.com/github/UITextField-Shake.gif)
+![UITextField+Shake](https://raw.githubusercontent.com/andreamazz/UITextField-Shake/master/screenshot.gif)
 
 Setup with Cocoapods
 --------------------
