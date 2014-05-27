@@ -31,7 +31,9 @@
 		self.transform = (shakeDirection == ShakeDirectionHorizontal) ? CGAffineTransformMakeTranslation(delta * direction, 0) : CGAffineTransformMakeTranslation(0, delta * direction);
 	} completion:^(BOOL finished) {
 		if(current >= times) {
-			self.transform = CGAffineTransformIdentity;
+			[UIView animateWithDuration:interval animations:^{
+				self.transform = CGAffineTransformIdentity;
+			}];
 			return;
 		}
 		[self _shake:(times - 1)
