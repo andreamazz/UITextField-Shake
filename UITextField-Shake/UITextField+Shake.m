@@ -12,59 +12,56 @@
 
 - (void)shake:(int)times withDelta:(CGFloat)delta
 {
-    [self shake:times withDelta:delta andCompletion:nil];
+    [self shake:times withDelta:delta completion:nil];
 }
 
--(void)shake:(int)times withDelta:(CGFloat)delta andCompletion:(CompletionHandler)handler
+- (void)shake:(int)times withDelta:(CGFloat)delta completion:(void(^)())handler
 {
-    [self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:0.03 shakeDirection:ShakeDirectionHorizontal andCompletionHandler:handler];
-
+    [self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:0.03 shakeDirection:ShakeDirectionHorizontal completion:handler];
 }
 
 - (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval
 {
-    [self shake:times withDelta:delta speed:interval andCompletion:nil];
+    [self shake:times withDelta:delta speed:interval completion:nil];
 }
 
-- (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval andCompletion:(CompletionHandler)handler
+- (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void(^)())handler
 {
-	[self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:interval shakeDirection:ShakeDirectionHorizontal andCompletionHandler:handler];
+    [self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:interval shakeDirection:ShakeDirectionHorizontal completion:handler];
 }
 
 - (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection
 {
-    [self shake:times withDelta:delta andSpeed:interval shakeDirection:ShakeDirectionHorizontal andCompletion:nil];
+    [self shake:times withDelta:delta andSpeed:interval shakeDirection:ShakeDirectionHorizontal completion:nil];
 }
 
-- (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection andCompletion:(CompletionHandler)handler
+- (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection completion:(void(^)())handler
 {
-    [self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:interval shakeDirection:shakeDirection andCompletionHandler:handler];
+    [self _shake:times direction:1 currentTimes:0 withDelta:delta andSpeed:interval shakeDirection:shakeDirection completion:handler];
 }
 
-- (void)_shake:(int)times direction:(int)direction currentTimes:(int)current withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection andCompletionHandler:(CompletionHandler)handler
+- (void)_shake:(int)times direction:(int)direction currentTimes:(int)current withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection completion:(void(^)())handler
 {
-	[UIView animateWithDuration:interval animations:^{
-		self.transform = (shakeDirection == ShakeDirectionHorizontal) ? CGAffineTransformMakeTranslation(delta * direction, 0) : CGAffineTransformMakeTranslation(0, delta * direction);
-	} completion:^(BOOL finished) {
-		if(current >= times) {
-			[UIView animateWithDuration:interval animations:^{
-				self.transform = CGAffineTransformIdentity;
-			} completion:^(BOOL finished) {
-                
-                if (handler)
-                {
+    [UIView animateWithDuration:interval animations:^{
+        self.transform = (shakeDirection == ShakeDirectionHorizontal) ? CGAffineTransformMakeTranslation(delta * direction, 0) : CGAffineTransformMakeTranslation(0, delta * direction);
+    } completion:^(BOOL finished) {
+        if(current >= times) {
+            [UIView animateWithDuration:interval animations:^{
+                self.transform = CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                if (handler) {
                     handler();
                 }
             }];
-			return;
-		}
-		[self _shake:(times - 1)
-		   direction:direction * -1
-		currentTimes:current + 1
-		   withDelta:delta
-			andSpeed:interval
-         shakeDirection:shakeDirection andCompletionHandler:handler];
-	}];
+            return;
+        }
+        [self _shake:(times - 1)
+           direction:direction * -1
+        currentTimes:current + 1
+           withDelta:delta
+            andSpeed:interval
+      shakeDirection:shakeDirection completion:handler];
+    }];
 }
 
 @end

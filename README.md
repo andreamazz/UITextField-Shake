@@ -1,5 +1,4 @@
-UITextField+Shake
-=============
+#UITextField+Shake
 
 [![Build Status](https://travis-ci.org/andreamazz/UITextField-Shake.png)](https://travis-ci.org/andreamazz/UITextField-Shake)
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/UITextField+Shake/badge.png)](http://cocoapods.org/?q=summary%3Auitextfield%20name%3Ashake%2A)
@@ -7,19 +6,16 @@ UITextField+Shake
 
 UITextField category that adds a shake animation like the password field of the OsX login screen.
 
-Screenshot
---------------------
+##Screenshot
 ![UITextField+Shake](https://raw.githubusercontent.com/andreamazz/UITextField-Shake/master/screenshot.gif)
 
-Setup with Cocoapods
---------------------
+##Setup with Cocoapods
 * Add ```pod 'UITextField+Shake'``` to your Podfile
 * Run ```pod install```
 * Run ```open App.xcworkspace```
 * Import ```UITextField+Shake.h``` in your controller's header file
 
-Usage
---------------------
+##Usage
 ```objc
 // Shake with the default speed
 [self.textField shake:10   // 10 times
@@ -40,16 +36,13 @@ Usage
 ];
 ```
 
-Changelog
-==================
-
-0.2
---------------------
-Added shake direction. Thanks to [SkylerLutz](https://github.com/SkylerLutz).
-
-0.1
---------------------
-First release
+##Completion Handler
+You can also pass a completion block that will be performed as soon as the shake animation stops
+```objc
+- (void)shake:(int)times withDelta:(CGFloat)delta completion:(void((^)()))handler;
+- (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void((^)()))handler;
+- (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection completion:(void((^)()))handler;
+```
 
 MIT License
 ==================

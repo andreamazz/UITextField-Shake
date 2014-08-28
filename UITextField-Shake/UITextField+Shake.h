@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Fancy Pixel. All rights reserved.
 //
 
-typedef void (^CompletionHandler)(void);
+@import UIKit;
 
 typedef NS_ENUM(NSInteger, ShakeDirection) {
     ShakeDirectionHorizontal = 0,
@@ -21,12 +21,12 @@ typedef NS_ENUM(NSInteger, ShakeDirection) {
  */
 
 /** Shake the UITextField
-*
-* Shake the text field a given number of times
-*
-* @param times The number of shakes
-* @param delta The width of the shake
-*/
+ *
+ * Shake the text field a given number of times
+ *
+ * @param times The number of shakes
+ * @param delta The width of the shake
+ */
 - (void)shake:(int)times withDelta:(CGFloat)delta;
 
 /** Shake the UITextField
@@ -37,7 +37,7 @@ typedef NS_ENUM(NSInteger, ShakeDirection) {
  * @param delta The width of the shake
  * @param handler A block object to be executed when the shake sequence ends
  */
-- (void)shake:(int)times withDelta:(CGFloat)delta andCompletion:(CompletionHandler)handler;
+- (void)shake:(int)times withDelta:(CGFloat)delta completion:(void((^)()))handler;
 
 /** Shake the UITextField at a custom speed
  *
@@ -58,7 +58,7 @@ typedef NS_ENUM(NSInteger, ShakeDirection) {
  * @param interval The duration of one shake
  * @param handler A block object to be executed when the shake sequence ends
  */
-- (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval andCompletion:(CompletionHandler)handler;
+- (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void((^)()))handler;
 
 /** Shake the UITextField at a custom speed
  *
@@ -81,5 +81,6 @@ typedef NS_ENUM(NSInteger, ShakeDirection) {
  * @param direction of the shake
  * @param handler A block object to be executed when the shake sequence ends
  */
-- (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection andCompletion:(CompletionHandler)handler;
+- (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection completion:(void((^)()))handler;
+
 @end
