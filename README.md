@@ -1,4 +1,6 @@
-#UITextField+Shake
+<p align="center">
+  <img src="assets/logo.png"/>
+</p>
 
 [![Build Status](https://travis-ci.org/andreamazz/UITextField-Shake.png)](https://travis-ci.org/andreamazz/UITextField-Shake)
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/UITextField+Shake/badge.png)](http://cocoapods.org/?q=summary%3Auitextfield%20name%3Ashake%2A)
@@ -7,7 +9,7 @@
 UITextField category that adds a shake animation like the password field of the OsX login screen.
 
 ##Screenshot
-![UITextField+Shake](https://raw.githubusercontent.com/andreamazz/UITextField-Shake/master/screenshot.gif)
+![UITextField+Shake](https://raw.githubusercontent.com/andreamazz/UITextField-Shake/master/assets/screenshot.gif)
 
 ##Setup with Cocoapods
 * Add ```pod 'UITextField+Shake'``` to your Podfile
