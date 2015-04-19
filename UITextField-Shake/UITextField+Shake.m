@@ -32,7 +32,7 @@
 
 - (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection
 {
-    [self shake:times withDelta:delta andSpeed:interval shakeDirection:ShakeDirectionHorizontal completion:nil];
+    [self shake:times withDelta:delta andSpeed:interval shakeDirection:shakeDirection completion:nil];
 }
 
 - (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection completion:(void(^)())handler
