@@ -9,7 +9,7 @@
 @import UIKit;
 
 typedef NS_ENUM(NSInteger, ShakeDirection) {
-    ShakeDirectionHorizontal = 0,
+    ShakeDirectionHorizontal,
     ShakeDirectionVertical
 };
 

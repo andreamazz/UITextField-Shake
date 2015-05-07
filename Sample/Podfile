@@ -1,0 +1,13 @@
+target 'Sample' do
+
+end
+
+target 'SampleTests' do
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+  pod 'Specta'
+  pod 'Expecta'
+  pod 'OCMock'
+end
+
+inhibit_all_warnings!

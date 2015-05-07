@@ -1,4 +1,6 @@
 language: objective-c
-install:
-- cd Sample
-script: xctool -project Sample.xcodeproj -scheme 'Sample' -configuration Release -sdk iphonesimulator7.0 -arch i386 build
+before_install:
+  - export LANG=en_US.UTF-8
+  - gem install cocoapods xcpretty slather --no-ri --no-rdoc --no-ri --no-rdoc
+script: rake test
+after_success: slather
