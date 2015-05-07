@@ -19,6 +19,9 @@ UITextField category that adds a shake animation like the password field of the 
 
 ##Usage
 ```objc
+// Shake
+[self.textField];
+
 // Shake with the default speed
 [self.textField shake:10   // 10 times
             withDelta:5    // 5 points wide
@@ -27,13 +30,13 @@ UITextField category that adds a shake animation like the password field of the 
 // Shake with a custom speed
 [self.textField shake:10   // 10 times
             withDelta:5    // 5 points wide
-             andSpeed:0.03 // 30ms per shake
+                speed:0.03 // 30ms per shake
 ];
 
 // Shake with a custom speed and direction
 [self.textField shake:10   // 10 times
             withDelta:5    // 5 points wide
-             andSpeed:0.03 // 30ms per shake
+                speed:0.03 // 30ms per shake
        shakeDirection:ShakeDirectionVertical
 ];
 ```
@@ -43,7 +46,7 @@ You can also pass a completion block that will be performed as soon as the shake
 ```objc
 - (void)shake:(int)times withDelta:(CGFloat)delta completion:(void((^)()))handler;
 - (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void((^)()))handler;
-- (void)shake:(int)times withDelta:(CGFloat)delta andSpeed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection completion:(void((^)()))handler;
+- (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection completion:(void((^)()))handler;
 ```
 
 MIT License
