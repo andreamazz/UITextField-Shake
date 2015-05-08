@@ -23,9 +23,6 @@ typedef NS_ENUM(NSInteger, ShakeDirection) {
 /** Shake the UITextField
 *
 * Shake the text field with default values
-*
-* @param times The number of shakes
-* @param delta The width of the shake
 */
 - (void)shake;
 
