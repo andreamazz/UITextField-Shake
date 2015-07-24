@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65083A121B624F5700DE16C0 /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 65083A111B624F5700DE16C0 /* UITextField+Shake.m */; };
 		65C825B118A67AB1004F55EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C825B018A67AB1004F55EC /* Foundation.framework */; };
 		65C825B318A67AB1004F55EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C825B218A67AB1004F55EC /* CoreGraphics.framework */; };
 		65C825B518A67AB1004F55EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C825B418A67AB1004F55EC /* UIKit.framework */; };
@@ -21,7 +22,6 @@
 		65C825D218A67AB1004F55EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C825B418A67AB1004F55EC /* UIKit.framework */; };
 		65C825DA18A67AB1004F55EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65C825D818A67AB1004F55EC /* InfoPlist.strings */; };
 		65C825DC18A67AB1004F55EC /* UITextFieldShakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C825DB18A67AB1004F55EC /* UITextFieldShakeTests.m */; };
-		65F28D9E18A6848700E6E276 /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F28D9D18A6848700E6E276 /* UITextField+Shake.m */; };
 		6921CAB521986DD78AA6D361 /* libPods-SampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C269523E20A2E1664C53C309 /* libPods-SampleTests.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65083A101B624F5700DE16C0 /* UITextField+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+Shake.h"; path = "../Source/UITextField+Shake.h"; sourceTree = "<group>"; };
+		65083A111B624F5700DE16C0 /* UITextField+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+Shake.m"; path = "../Source/UITextField+Shake.m"; sourceTree = "<group>"; };
 		65C825AD18A67AB1004F55EC /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C825B018A67AB1004F55EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65C825B218A67AB1004F55EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,8 +57,6 @@
 		65C825D718A67AB1004F55EC /* SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleTests-Info.plist"; sourceTree = "<group>"; };
 		65C825D918A67AB1004F55EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65C825DB18A67AB1004F55EC /* UITextFieldShakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldShakeTests.m; sourceTree = "<group>"; };
-		65F28D9C18A6848700E6E276 /* UITextField+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake.h"; sourceTree = "<group>"; };
-		65F28D9D18A6848700E6E276 /* UITextField+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake.m"; sourceTree = "<group>"; };
 		7FC2A4CBC06E813DC36324CC /* Pods-SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleTests/Pods-SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		923ED3235CBEC2C7CE50C983 /* Pods-SampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleTests/Pods-SampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		C269523E20A2E1664C53C309 /* libPods-SampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,8 +175,8 @@
 		65F28D9B18A6848700E6E276 /* UITextField-Shake */ = {
 			isa = PBXGroup;
 			children = (
-				65F28D9C18A6848700E6E276 /* UITextField+Shake.h */,
-				65F28D9D18A6848700E6E276 /* UITextField+Shake.m */,
+				65083A101B624F5700DE16C0 /* UITextField+Shake.h */,
+				65083A111B624F5700DE16C0 /* UITextField+Shake.m */,
 			);
 			name = "UITextField-Shake";
 			path = "../../UITextField-Shake";
@@ -315,10 +315,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65F28D9E18A6848700E6E276 /* UITextField+Shake.m in Sources */,
 				65C825C118A67AB1004F55EC /* AMAppDelegate.m in Sources */,
 				65C825C718A67AB1004F55EC /* AMViewController.m in Sources */,
 				65C825BD18A67AB1004F55EC /* main.m in Sources */,
+				65083A121B624F5700DE16C0 /* UITextField+Shake.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
