@@ -24,49 +24,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-	[self setTitle:@"Demo"];
-	[@[_textDelta, _textField, _textShakes, _textSpeed] enumerateObjectsUsingBlock:^(UITextField* obj, NSUInteger idx, BOOL *stop) {
-		[obj.layer setBorderWidth:2];
-		[obj.layer setBorderColor:[UIColor colorWithRed:49.0/255.0 green:186.0/255.0 blue:81.0/255.0 alpha:1].CGColor];
-		[obj setDelegate:self];
-	}];
-	[self.shakeDirection.layer setBorderWidth:2];
-	[self.shakeDirection.layer setBorderColor:self.shakeDirection.tintColor.CGColor];
+
+    [self setTitle:@"Demo"];
+    [@[_textDelta, _textField, _textShakes, _textSpeed] enumerateObjectsUsingBlock:^(UITextField* obj, NSUInteger idx, BOOL *stop) {
+        [obj.layer setBorderWidth:2];
+        [obj.layer setBorderColor:[UIColor colorWithRed:49.0/255.0 green:186.0/255.0 blue:81.0/255.0 alpha:1].CGColor];
+        [obj setDelegate:self];
+    }];
+    [self.shakeDirection.layer setBorderWidth:2];
+    [self.shakeDirection.layer setBorderColor:self.shakeDirection.tintColor.CGColor];
     self.shakeDirection.selectedSegmentIndex = 0;
 }
 
 - (IBAction)actionShake:(id)sender
 {
-	[self shake];
+    [self shake];
 }
 
 - (void)shake
 {
-	[self.textField shake:[self.textShakes.text intValue]
-				withDelta:[self.textDelta.text floatValue]
+    [self.textField shake:[self.textShakes.text intValue]
+                withDelta:[self.textDelta.text floatValue]
                     speed:[self.textSpeed.text floatValue]
            shakeDirection:(self.shakeDirection.selectedSegmentIndex == 0) ? ShakeDirectionHorizontal : ShakeDirectionVertical];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-	if (textField != _textField) {
-		[textField resignFirstResponder];
-	} else {
-		[self shake];
-	}
-	
-	return YES;
+    if (textField != _textField) {
+        [textField resignFirstResponder];
+    } else {
+        [self shake];
+    }
+
+    return YES;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	[self.view.subviews enumerateObjectsUsingBlock:^(UIView* obj, NSUInteger idx, BOOL *stop) {
-		if ([obj isKindOfClass:[UITextField class]]) {
-			[obj resignFirstResponder];
-		}
-	}];
+    [self.view.subviews enumerateObjectsUsingBlock:^(UIView* obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isKindOfClass:[UITextField class]]) {
+            [obj resignFirstResponder];
+        }
+    }];
 }
 
 @end

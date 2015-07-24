@@ -8,8 +8,14 @@
 
 @import UIKit;
 
+/** @enum ShakeDirection
+ *
+ * Enum that specifies the direction of the shake
+ */
 typedef NS_ENUM(NSInteger, ShakeDirection) {
+    /** Shake left and right */
     ShakeDirectionHorizontal,
+    /** Shake up and down */
     ShakeDirectionVertical
 };
 
@@ -21,9 +27,9 @@ typedef NS_ENUM(NSInteger, ShakeDirection) {
  */
 
 /** Shake the UITextField
-*
-* Shake the text field with default values
-*/
+ *
+ * Shake the text field with default values
+ */
 - (void)shake;
 
 /** Shake the UITextField
