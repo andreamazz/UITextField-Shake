@@ -57,20 +57,20 @@ github "andreamazz/UITextField-Shake"
 self.textField.shake()
         
 // Shake with the default speed
-self.textField.shake(10,   // 10 times
-                     withDelta: 5.0    // 5 points wide
+self.textField.shake(10,              // 10 times
+                     withDelta: 5.0   // 5 points wide
 )
         
 // Shake with a custom speed
-self.textField.shake(10,   // 10 times
-                     withDelta: 5.0,    // 5 points wide
-                     speed: 0.03 // 30ms per shake
+self.textField.shake(10,              // 10 times
+                     withDelta: 5.0,  // 5 points wide
+                     speed: 0.03      // 30ms per shake
 )
         
 // Shake with a custom speed and direction
-self.textField.shake(10,   // 10 times
-                     withDelta: 5.0,    // 5 points wide
-                     speed: 0.03, // 30ms per shake
+self.textField.shake(10,              // 10 times
+                     withDelta: 5.0,  // 5 points wide
+                     speed: 0.03,     // 30ms per shake
                      shakeDirection: ShakeDirection.Vertical
 )
 ```
@@ -82,9 +82,17 @@ You can also pass a completion block that will be performed as soon as the shake
 - (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void((^)()))handler;
 - (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection completion:(void((^)()))handler;
 ```
+or in Swift using the trailing closure syntax:
+```swift
+textField.shake(10, withDelta: 5) {
+    println("done")
+}
+```
 
-MIT License
-==================
+#Author
+[Andrea Mazzini](https://twitter.com/theandreamazz)
+
+#MIT License
 	Copyright (c) 2015 Andrea Mazzini. All rights reserved.
 
 	Permission is hereby granted, free of charge, to any person obtaining a
