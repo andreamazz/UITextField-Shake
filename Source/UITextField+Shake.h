@@ -8,6 +8,8 @@
 
 @import UIKit;
 
+typedef void (^ShakeCompletionHandler)(void);
+
 /** @enum ShakeDirection
  *
  * Enum that specifies the direction of the shake
@@ -70,7 +72,7 @@ typedef NS_ENUM(NSInteger, ShakeDirection) {
  * @param interval The duration of one shake
  * @param handler A block object to be executed when the shake sequence ends
  */
-- (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void((^)()))handler;
+- (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(ShakeCompletionHandler)handler;
 
 /** Shake the UITextField at a custom speed
  *
@@ -93,6 +95,6 @@ typedef NS_ENUM(NSInteger, ShakeDirection) {
  * @param direction of the shake
  * @param handler A block object to be executed when the shake sequence ends
  */
-- (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection completion:(void((^)()))handler;
+- (void)shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(ShakeDirection)shakeDirection completion:(ShakeCompletionHandler)handler;
 
 @end
