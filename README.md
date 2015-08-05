@@ -26,7 +26,7 @@ github "andreamazz/UITextField-Shake"
 ##Usage
 ```objc
 // Shake
-[self.textField];
+[[self.textField] shake];
 
 // Shake with the default speed
 [self.textField shake:10   // 10 times
