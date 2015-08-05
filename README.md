@@ -14,7 +14,7 @@ UITextField category that adds a shake animation like the password field of the 
 
 ##Setup with Cocoapods
 ```
-pod 'UITextField-Shake', '~> 1.1'
+pod 'UITextField+Shake', '~> 1.1'
 ```
 Import ```UITextField+Shake.h``` in your controller's header file, or ```UITextField_Shake``` if you are using the `use_frameworks!` directive.
 
@@ -24,9 +24,12 @@ github "andreamazz/UITextField-Shake"
 ```
 
 ##Usage
+
+###In Objective-C
+
 ```objc
 // Shake
-[self.textField];
+[[self.textField] shake];
 
 // Shake with the default speed
 [self.textField shake:10   // 10 times
@@ -45,6 +48,31 @@ github "andreamazz/UITextField-Shake"
                 speed:0.03 // 30ms per shake
        shakeDirection:ShakeDirectionVertical
 ];
+```
+
+###In Swift
+
+```swift
+// Shake
+self.textField.shake()
+        
+// Shake with the default speed
+self.textField.shake(10,   // 10 times
+                     withDelta: 5.0    // 5 points wide
+)
+        
+// Shake with a custom speed
+self.textField.shake(10,   // 10 times
+                     withDelta: 5.0,    // 5 points wide
+                     speed: 0.03 // 30ms per shake
+)
+        
+// Shake with a custom speed and direction
+self.textField.shake(10,   // 10 times
+                     withDelta: 5.0,    // 5 points wide
+                     speed: 0.03, // 30ms per shake
+                     shakeDirection: ShakeDirection.Vertical
+)
 ```
 
 ##Completion Handler
