@@ -18,7 +18,7 @@
     [self shake:times withDelta:delta completion:nil];
 }
 
-- (void)shake:(int)times withDelta:(CGFloat)delta completion:(void (^)(void))handler {
+- (void)shake:(int)times withDelta:(CGFloat)delta completion:(nullable void (^)(void))handler {
     [self _shake:times direction:1 currentTimes:0 withDelta:delta speed:0.03 shakeDirection:ShakeDirectionHorizontal completion:handler];
 }
 
