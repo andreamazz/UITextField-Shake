@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "UITextField+Shake"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "UITextField category that adds a shake animation like the password field of the OsX login screen."
   s.homepage     = "https://github.com/andreamazz/UITextField-Shake"
   s.social_media_url = 'https://twitter.com/theandreamazz'
