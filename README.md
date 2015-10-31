@@ -96,9 +96,6 @@ textField.shake(10, withDelta: 5) {
 ```
 
 #Author
-[Andrea Mazzini](https://twitter.com/theandreamazz)
-
-#Author
 [Andrea Mazzini](https://twitter.com/theandreamazz). I'm available for freelance work, feel free to contact me. 
 
 Want to support the development of [these free libraries](https://cocoapods.org/owners/734)? Buy me a coffee ☕️ via [Paypal](https://www.paypal.me/andreamazzini).  
