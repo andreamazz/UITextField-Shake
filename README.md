@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png"/>
+  <img width="420" height="240" src="assets/logo.png"/>
 </p>
 
 [![Build Status](https://travis-ci.org/andreamazz/UITextField-Shake.svg)](https://travis-ci.org/andreamazz/UITextField-Shake)
@@ -8,6 +8,12 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 UITextField category that adds a shake animation like the password field of the OsX login screen.
+
+<p align="center">
+  <a href='https://appetize.io/app/20h2nwzbz128ebvwgf0kkm3tmg' alt='Live demo'>
+    <img width="50" height="60" src="assets/demo.png"/>
+  </a>
+</p>
 
 ##Screenshot
 ![UITextField+Shake](https://raw.githubusercontent.com/andreamazz/UITextField-Shake/master/assets/screenshot.gif)
@@ -91,6 +97,14 @@ textField.shake(10, withDelta: 5) {
 
 #Author
 [Andrea Mazzini](https://twitter.com/theandreamazz)
+
+#Author
+[Andrea Mazzini](https://twitter.com/theandreamazz). I'm available for freelance work, feel free to contact me. 
+
+Want to support the development of [these free libraries](https://cocoapods.org/owners/734)? Buy me a coffee ☕️ via [Paypal](https://www.paypal.me/andreamazzini).  
+
+#Contributors
+Thanks to [everyone](https://github.com/andreamazz/UITextField-Shake/graphs/contributors) kind enough to submit a pull request. 
 
 #MIT License
 	Copyright (c) 2015 Andrea Mazzini. All rights reserved.

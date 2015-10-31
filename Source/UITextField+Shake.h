@@ -3,7 +3,7 @@
 //  UITextField+Shake
 //
 //  Created by Andrea Mazzini on 08/02/14.
-//  Copyright (c) 2014 Fancy Pixel. All rights reserved.
+//  Copyright (c) 2015 Fancy Pixel. All rights reserved.
 //
 
 @import UIKit;
@@ -19,12 +19,11 @@ typedef NS_ENUM(NSInteger, ShakeDirection) {
     ShakeDirectionVertical
 };
 
-@interface UITextField (Shake)
-
-/**-----------------------------------------------------------------------------
+/**
  * @name UITextField+Shake
- * -----------------------------------------------------------------------------
+ * A UITextField category that add the ability to shake the component
  */
+@interface UITextField (Shake)
 
 /** Shake the UITextField
  *
