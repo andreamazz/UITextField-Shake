@@ -15,3 +15,5 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+
+Carthage
