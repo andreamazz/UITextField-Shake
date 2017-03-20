@@ -3,6 +3,7 @@
 </p>
 
 [![Build Status](https://travis-ci.org/andreamazz/UITextField-Shake.svg)](https://travis-ci.org/andreamazz/UITextField-Shake)
+[![CocoaPods](https://cocoapod-badges.herokuapp.com/v/UITextField+Shake/badge.svg)](http://cocoapods.org/?q=summary%3Auitextfield%20name%3Ashake%2A)
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/UITextField+Shake/badge.svg)](http://cocoapods.org/?q=summary%3Auitextfield%20name%3Ashake%2A)
 [![Coverage Status](https://coveralls.io/repos/andreamazz/UITextField-Shake/badge.svg)](https://coveralls.io/r/andreamazz/UITextField-Shake)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -18,7 +19,7 @@ UITextField category that adds a shake animation like the password field of the 
 ## Screenshot
 ![UITextField+Shake](https://raw.githubusercontent.com/andreamazz/UITextField-Shake/master/assets/screenshot.gif)
 
-## Setup with Cocoapods
+## Setup with CocoaPods
 ```
 pod 'UITextField+Shake', '~> 1.1'
 ```
