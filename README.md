@@ -15,23 +15,23 @@ UITextField category that adds a shake animation like the password field of the 
   </a>
 </p>
 
-##Screenshot
+## Screenshot
 ![UITextField+Shake](https://raw.githubusercontent.com/andreamazz/UITextField-Shake/master/assets/screenshot.gif)
 
-##Setup with Cocoapods
+## Setup with Cocoapods
 ```
 pod 'UITextField+Shake', '~> 1.1'
 ```
 Import ```UITextField+Shake.h``` in your controller's header file, or ```UITextField_Shake``` if you are using the `use_frameworks!` directive.
 
-##Setup with Carthage
+## Setup with Carthage
 ```
 github "andreamazz/UITextField-Shake"
 ```
 
-##Usage
+## Usage
 
-###In Objective-C
+### In Objective-C
 
 ```objc
 // Shake
@@ -56,23 +56,23 @@ github "andreamazz/UITextField-Shake"
 ];
 ```
 
-###In Swift
+### In Swift
 
 ```swift
 // Shake
 self.textField.shake()
-        
+
 // Shake with the default speed
 self.textField.shake(10,              // 10 times
                      withDelta: 5.0   // 5 points wide
 )
-        
+
 // Shake with a custom speed
 self.textField.shake(10,              // 10 times
                      withDelta: 5.0,  // 5 points wide
                      speed: 0.03      // 30ms per shake
 )
-        
+
 // Shake with a custom speed and direction
 self.textField.shake(10,              // 10 times
                      withDelta: 5.0,  // 5 points wide
@@ -81,7 +81,7 @@ self.textField.shake(10,              // 10 times
 )
 ```
 
-##Completion Handler
+## Completion Handler
 You can also pass a completion block that will be performed as soon as the shake animation stops
 ```objc
 - (void)shake:(int)times withDelta:(CGFloat)delta completion:(void((^)()))handler;
@@ -95,16 +95,16 @@ textField.shake(10, withDelta: 5) {
 }
 ```
 
-#Author
-[Andrea Mazzini](https://twitter.com/theandreamazz). I'm available for freelance work, feel free to contact me. 
+# Author
+[Andrea Mazzini](https://twitter.com/theandreamazz). I'm available for freelance work, feel free to contact me.
 
 Want to support the development of [these free libraries](https://cocoapods.org/owners/734)? Buy me a coffee ☕️ via [Paypal](https://www.paypal.me/andreamazzini).  
 
-#Contributors
-Thanks to [everyone](https://github.com/andreamazz/UITextField-Shake/graphs/contributors) kind enough to submit a pull request. 
+# Contributors
+Thanks to [everyone](https://github.com/andreamazz/UITextField-Shake/graphs/contributors) kind enough to submit a pull request.
 
-#MIT License
-	Copyright (c) 2015 Andrea Mazzini. All rights reserved.
+# MIT License
+	Copyright (c) 2017 Andrea Mazzini. All rights reserved.
 
 	Permission is hereby granted, free of charge, to any person obtaining a
 	copy of this software and associated documentation files (the "Software"),
