@@ -11,7 +11,7 @@
 @implementation UITextField (Shake)
 
 - (void)shake {
-    [self shake:10 withDelta:5 completion:nil];
+    [self shake:5 withDelta:5 completion:nil];
 }
 
 - (void)shake:(int)times withDelta:(CGFloat)delta {
@@ -52,7 +52,7 @@
             }];
             return;
         }
-        [self _shake:(times - 1)
+        [self _shake:times
            direction:direction * -1
         currentTimes:current + 1
            withDelta:delta
