@@ -10,6 +10,10 @@
 
 UITextField category that adds a shake animation like the password field of the OsX login screen.
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/9Jjp1jzKpTgCg7fq5tVzNmnV/andreamazz/UITextField-Shake'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/9Jjp1jzKpTgCg7fq5tVzNmnV/andreamazz/UITextField-Shake.svg' />
+</a>
+
 <p align="center">
   <a href='https://appetize.io/app/20h2nwzbz128ebvwgf0kkm3tmg' alt='Live demo'>
     <img width="50" height="60" src="assets/demo.png"/>
