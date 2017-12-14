@@ -25,7 +25,7 @@ UITextField category that adds a shake animation like the password field of the 
 
 ## Setup with CocoaPods
 ```
-pod 'UITextField+Shake', '~> 1.1'
+pod 'UITextField+Shake', '~> 1.2'
 ```
 Import ```UITextField+Shake.h``` in your controller's header file, or ```UITextField_Shake``` if you are using the `use_frameworks!` directive.
 
